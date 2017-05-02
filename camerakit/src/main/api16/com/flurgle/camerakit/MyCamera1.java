@@ -18,8 +18,9 @@ public class MyCamera1 extends Camera1 {
     @Override
     void endVideo() {
         boolean isMediaRecorder = mMediaRecorder == null;
-        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
-        super.endVideo();
+//        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
+        System.out.print(isMediaRecorder);
+//        super.endVideo();
     }
 
     private void releaseMediaRecorder(){
@@ -46,18 +47,18 @@ public class MyCamera1 extends Camera1 {
         return true;
     }
 
-    @Override
-    void startVideo() {
-//        super.startVideo();
-        initMediaRecorder();
-//        prepareMediaRecorder();
-//        mMediaRecorder.start();
-        if (prepareMediaRecorder()){
-            mMediaRecorder.start();
-        } else {
-            releaseMediaRecorder();
-        }
-    }
+//    @Override
+//    void startVideo() {
+////        super.startVideo();
+//        initMediaRecorder();
+////        prepareMediaRecorder();
+////        mMediaRecorder.start();
+//        if (prepareMediaRecorder()){
+//            mMediaRecorder.start();
+//        } else {
+//            releaseMediaRecorder();
+//        }
+//    }
 
 
 }
