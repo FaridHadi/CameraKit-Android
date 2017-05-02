@@ -62,11 +62,11 @@ public class CameraView extends FrameLayout {
     private boolean mCropOutput;
     private boolean mAdjustViewBounds;
 
-    private CameraListenerMiddleWare mCameraListener;
+    protected CameraListenerMiddleWare mCameraListener;
     private DisplayOrientationDetector mDisplayOrientationDetector;
 
-    private CameraImpl mCameraImpl;
-    private PreviewImpl mPreviewImpl;
+    protected CameraImpl mCameraImpl;
+    protected PreviewImpl mPreviewImpl;
 
     public CameraView(@NonNull Context context) {
         super(context, null);

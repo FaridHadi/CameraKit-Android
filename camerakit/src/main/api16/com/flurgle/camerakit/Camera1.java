@@ -34,12 +34,12 @@ public class Camera1 extends CameraImpl {
     private static final int DELAY_MILLIS_BEFORE_RESETTING_FOCUS = 3000;
 
     private int mCameraId;
-    private Camera mCamera;
+    protected Camera mCamera;
     private Camera.Parameters mCameraParameters;
     private Camera.CameraInfo mCameraInfo;
     private Size mPreviewSize;
     private Size mCaptureSize;
-    private MediaRecorder mMediaRecorder;
+    protected MediaRecorder mMediaRecorder;
     private File mVideoFile;
     private Camera.AutoFocusCallback mAutofocusCallback;
 
@@ -248,6 +248,8 @@ public class Camera1 extends CameraImpl {
         mCameraListener.onVideoTaken(mVideoFile);
     }
 
+
+
     @Override
     Size getCaptureResolution() {
         if (mCaptureSize == null && mCameraParameters != null) {
@@ -414,7 +416,7 @@ public class Camera1 extends CameraImpl {
         return output;
     }
 
-    private void initMediaRecorder() {
+    protected void initMediaRecorder() {
         mMediaRecorder = new MediaRecorder();
         mCamera.unlock();
 
