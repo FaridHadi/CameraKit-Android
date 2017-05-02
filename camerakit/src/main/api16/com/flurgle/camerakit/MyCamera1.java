@@ -17,6 +17,8 @@ public class MyCamera1 extends Camera1 {
 
     @Override
     void endVideo() {
+        boolean isMediaRecorder = mMediaRecorder == null;
+        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
         super.endVideo();
     }
 
@@ -56,4 +58,6 @@ public class MyCamera1 extends Camera1 {
             releaseMediaRecorder();
         }
     }
+
+
 }
