@@ -18,8 +18,8 @@ public class MyCamera1 extends Camera1 {
     @Override
     void endVideo() {
         boolean isMediaRecorder = mMediaRecorder == null;
-//        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
-        System.out.println(isMediaRecorder);
+        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
+//        System.out.println(isMediaRecorder);
 //        super.endVideo();
     }
 
