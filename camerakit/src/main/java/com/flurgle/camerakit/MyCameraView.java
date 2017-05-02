@@ -11,8 +11,8 @@ import android.util.AttributeSet;
 
 public class MyCameraView extends CameraView {
 
-    public MyCameraView(@NonNull Context context, AttributeSet attrs) {
+    public MyCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mCameraImpl = new MyCamera1(mCameraListener, mPreviewImpl);
+        mCameraImpl = new MyCamera1(context, mCameraListener, mPreviewImpl);
     }
 }

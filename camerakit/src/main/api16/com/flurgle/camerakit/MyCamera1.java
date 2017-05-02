@@ -1,6 +1,8 @@
 package com.flurgle.camerakit;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -10,6 +12,12 @@ import java.io.IOException;
 
 public class MyCamera1 extends Camera1 {
     private String TAG = MyCamera1.class.getSimpleName();
+    private Context mContext;
+
+    MyCamera1(Context context, CameraListener callback, PreviewImpl preview) {
+        super(callback, preview);
+        mContext = context;
+    }
 
     MyCamera1(CameraListener callback, PreviewImpl preview) {
         super(callback, preview);
@@ -19,6 +27,7 @@ public class MyCamera1 extends Camera1 {
     void endVideo() {
         boolean isMediaRecorder = mMediaRecorder == null;
         Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
+        Toast.makeText(mContext, "Media recorder : "+Boolean.toString(isMediaRecorder), Toast.LENGTH_SHORT).show();
 //        System.out.println(isMediaRecorder);
 //        super.endVideo();
     }
