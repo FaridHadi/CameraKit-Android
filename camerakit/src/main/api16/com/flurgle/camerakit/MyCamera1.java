@@ -25,9 +25,13 @@ public class MyCamera1 extends Camera1 {
 
     @Override
     void endVideo() {
-        boolean isMediaRecorder = mMediaRecorder == null;
-        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
-        Toast.makeText(mContext, "Media recorder : "+Boolean.toString(isMediaRecorder), Toast.LENGTH_SHORT).show();
+//        boolean isMediaRecorder = mMediaRecorder == null;
+//        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
+        try{
+            super.endVideo();
+        } catch (Exception e){
+            Toast.makeText(mContext, "Stop failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 //        System.out.println(isMediaRecorder);
 //        super.endVideo();
     }
