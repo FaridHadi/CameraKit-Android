@@ -19,7 +19,7 @@ public class MyCamera1 extends Camera1 {
     void endVideo() {
         boolean isMediaRecorder = mMediaRecorder == null;
 //        Log.d(TAG, "media recorder : " + Boolean.toString(isMediaRecorder));
-        System.out.print(isMediaRecorder);
+        System.out.println(isMediaRecorder);
 //        super.endVideo();
     }
 
